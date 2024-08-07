@@ -30,6 +30,15 @@ def winner_first(player1_picked, player2_picked):
     replace_player2 = player2_picked.replace("2","1")
     replaced_end_message = player1_picked.replace("Player 1 has picked","")
     if player1_picked.lower() == replace_player2.lower():
-        print(f"Both players picked {replaced_end_message.upper()} it's a draw!!!")
+        print(f"Both players picked {replaced_end_message.upper()} It's a draw!!!")
+    elif len(player1_picked) == 31 and len(player2_picked) == 28:
+        print("Player 1 has won this round!!!")
+    elif len(player1_picked) == 28 and len(player2_picked) == 27:
+        print("Player 1 has won this round!!!")
+    elif len(player1_picked) == 27 and len(player2_picked) == 31:
+        print("Player 1 has won this round!!!")
+    else:
+        print("Player 2 has won this round!!!")    
+        # scissors = 31 rock = 27 paper = 28
 
 main()
